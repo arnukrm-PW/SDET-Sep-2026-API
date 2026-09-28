@@ -21,15 +21,14 @@ const jsonData = await response.json()
         //udpate same userID
 const updateResponse =await  userServices.updateUser(userid,modifiedData)
 expect(updateResponse.status()).toBe(200)
-const updatejsonData=updateResponse.json()
-console.log(`updated JsonData: ${updatejsonData}`)
+const updatejsonData=await updateResponse.json()
+console.log(`updated JsonData: ${ updatejsonData}`)
 expect(updatejsonData.name).toBe(modifiedData.name)
 expect(updatejsonData.job).toBe(modifiedData.job)
 
 //delete same userID
 const deleteResponse=await userServices.deleteUser(userid)
-expect(deleteResponse).tobe(204)
-const deleteJsonData = deleteResponse.json()
-console.log(`deleteJSONData : ${deleteJsonData}`)
+expect(deleteResponse.status()).toBe(204)
+
     })
 })

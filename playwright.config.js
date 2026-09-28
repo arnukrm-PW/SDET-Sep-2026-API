@@ -1,6 +1,6 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
-import{BASE_API_URL} from '../SDET26Sep2026_3_APIFramework/utils/envConfig'
+import{BASE_API_URL} from './utils/envConfig'
 
 /**
  * Read environment variables from file.
