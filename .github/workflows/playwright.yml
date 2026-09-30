@@ -5,7 +5,10 @@ on:
   pull_request:
     branches: [ main, master ]
   schedule:
-    - cron: '30 3 * * *'   # Daily at 03:30 UTC (09:00 AM IST)
+
+    - cron: '30 15 * * *'
+  workflow_dispatch:
+
 jobs:
   test:
     timeout-minutes: 60
